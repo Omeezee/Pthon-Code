@@ -1,0 +1,10 @@
+local function awardXP (player,amount)
+	if player and player:FindFirstChild("leaderstats") then
+		local xp = player.leaderstats:FindFirstChild("XP")
+		if xp then
+			xp.Value = xp.Value + amount
+			print(player.Name .. " has received " .. amount .. " XP.")
+		end
+	end
+end
+
